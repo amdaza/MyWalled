@@ -104,8 +104,7 @@
 		C09ACC141D3D6C2400E461A3 /* MyWalled */ = {
 			isa = PBXGroup;
 			children = (
-				C09ACC4A1D3D6E3E00E461A3 /* Euro.h */,
-				C09ACC4B1D3D6E3F00E461A3 /* Euro.m */,
+				C0F546C71D3FF37200D0153B /* Models */,
 				C09ACC181D3D6C2400E461A3 /* AppDelegate.h */,
 				C09ACC191D3D6C2400E461A3 /* AppDelegate.m */,
 				C09ACC1B1D3D6C2400E461A3 /* ViewController.h */,
@@ -143,6 +142,15 @@
 				C09ACC3C1D3D6C2400E461A3 /* Info.plist */,
 			);
 			path = MyWalledUITests;
+			sourceTree = "<group>";
+		};
+		C0F546C71D3FF37200D0153B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C09ACC4A1D3D6E3E00E461A3 /* Euro.h */,
+				C09ACC4B1D3D6E3F00E461A3 /* Euro.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -507,6 +515,7 @@
 				C09ACC411D3D6C2400E461A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C09ACC421D3D6C2400E461A3 /* Build configuration list for PBXNativeTarget "MyWalledTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +524,7 @@
 				C09ACC441D3D6C2400E461A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C09ACC451D3D6C2400E461A3 /* Build configuration list for PBXNativeTarget "MyWalledUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +533,7 @@
 				C09ACC471D3D6C2400E461A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

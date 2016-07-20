@@ -9,6 +9,7 @@
 #import "Euro.h"
 
 @interface Euro()
+// For only writing inside class
 @property (nonatomic) NSInteger amount;
 @end
 
