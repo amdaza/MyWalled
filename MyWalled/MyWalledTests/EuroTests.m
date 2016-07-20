@@ -44,7 +44,8 @@
     Euro *five = [[Euro alloc] initWithAmount:5];
     Euro *ten = [[Euro alloc] initWithAmount:10];
     Euro *total = [five times:2];
-    XCTAssertEqualObects(ten, total,
+
+    XCTAssertEqualObjects(ten, total,
                          @"Objects with same amount should be equal");
 }
 

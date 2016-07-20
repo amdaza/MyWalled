@@ -32,4 +32,9 @@
     return newEuro;
 }
 
+#pragma mark - Overwritten
+-(BOOL) isEqual:(id)object {
+    return [self amount] == [object amount];
+}
+
 @end
