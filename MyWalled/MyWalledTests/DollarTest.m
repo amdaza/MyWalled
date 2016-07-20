@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "Dollar.h"
 
 @interface DollarTest : XCTestCase
 

@@ -17,6 +17,7 @@
 		C09ACC491D3D6D1B00E461A3 /* EuroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C09ACC481D3D6D1B00E461A3 /* EuroTests.m */; };
 		C0F546CA1D3FFC8A00D0153B /* Euro.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F546C81D3FFC8A00D0153B /* Euro.m */; };
 		C0F546CC1D40050300D0153B /* DollarTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F546CB1D40050300D0153B /* DollarTest.m */; };
+		C0F546CF1D4005F500D0153B /* Dollar.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F546CE1D4005F500D0153B /* Dollar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		C0F546C81D3FFC8A00D0153B /* Euro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Euro.m; sourceTree = "<group>"; };
 		C0F546C91D3FFC8A00D0153B /* Euro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Euro.h; sourceTree = "<group>"; };
 		C0F546CB1D40050300D0153B /* DollarTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DollarTest.m; sourceTree = "<group>"; };
+		C0F546CD1D4005F500D0153B /* Dollar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dollar.h; sourceTree = "<group>"; };
+		C0F546CE1D4005F500D0153B /* Dollar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dollar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +155,8 @@
 			children = (
 				C0F546C81D3FFC8A00D0153B /* Euro.m */,
 				C0F546C91D3FFC8A00D0153B /* Euro.h */,
+				C0F546CD1D4005F500D0153B /* Dollar.h */,
+				C0F546CE1D4005F500D0153B /* Dollar.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0F546CF1D4005F500D0153B /* Dollar.m in Sources */,
 				C0F546CA1D3FFC8A00D0153B /* Euro.m in Sources */,
 				C09ACC1D1D3D6C2400E461A3 /* ViewController.m in Sources */,
 				C09ACC1A1D3D6C2400E461A3 /* AppDelegate.m in Sources */,
