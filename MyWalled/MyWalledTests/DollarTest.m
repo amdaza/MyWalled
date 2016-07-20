@@ -24,13 +24,22 @@
     Dollar *shouldResult = [[Dollar alloc] initWithAmount: 10];
     
     XCTAssertEqualObjects(shouldResult, product,
-                          @"€5 times 2 should be €10");
+                          @"$5 times 2 should be $10");
     
     product = [five times: 3];
     shouldResult = [[Dollar alloc] initWithAmount: 15];
     
     XCTAssertEqualObjects(product, shouldResult,
-                          @"€5 times 3 should be €15");
+                          @"$5 times 3 should be $15");
+}
+
+-(void) testEquality {
+    Dollar *five = [[Dollar alloc] initWithAmount:5];
+    Dollar *ten = [[Dollar alloc] initWithAmount:10];
+    Dollar *total = [five times:2];
+    
+    XCTAssertEqualObjects(ten, total,
+                          @"Objects with same amount should be equal");
 }
 
 @end
