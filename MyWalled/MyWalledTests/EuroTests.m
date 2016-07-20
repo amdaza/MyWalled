@@ -33,13 +33,13 @@
     Euro *product = [five times:2];
     Euro *shouldResult = [[Euro alloc] initWithAmount: 10];
     
-    XCTAssertEqual(shouldResult, product,
+    XCTAssertEqualObjects(shouldResult, product,
                    @"€5 times 2 should be €10");
     
     product = [five times: 3];
     shouldResult = [[Euro alloc] initWithAmount: 15];
     
-    XCTAssertEqual(product, shouldResult,
+    XCTAssertEqualObjects(product, shouldResult,
                    @"€5 times 3 should be €15");
 }
 
