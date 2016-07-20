@@ -1,19 +1,18 @@
 //
-//  Dollar.h
+//  Money.h
 //  MyWalled
 //
 //  Created by Alicia Daza on 20/07/16.
 //  Copyright © 2016 Alicia Daza. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "Money.h"
+#import <Foundation/Foundation.h>
 
-@interface Dollar : Money
-
+@interface Money : NSObject
 
 -(instancetype) initWithAmount:(NSInteger) amount;
 
--(Dollar *) times: (NSInteger) multiplier;
+-(Money *) times: (NSInteger) multiplier;
+
 
 @end
