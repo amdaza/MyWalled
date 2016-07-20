@@ -29,9 +29,15 @@
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
     
-    Euro *total = [[Euro alloc] initWithAmount: 5];
-    [total times: 2];
-    XCTAssertEqual(total.amount, 10);
+    Euro *five = [[Euro alloc] initWithAmount: 5];
+    Euro *product = [five times:2];
+    
+    XCTAssertEqual(10, product.amount,
+                   @"Both amounts should be equal");
+    
+    product = [five times: 3];
+    XCTAssertEqual(product.amount, 15,
+                   @"Both amounts should be equal");
 }
 
 
