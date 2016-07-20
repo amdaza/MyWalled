@@ -14,5 +14,5 @@
 
 -(instancetype) initWithAmount:(NSInteger) amount;
 
--(void) times: (NSInteger) multiplier;
+-(Euro *) times: (NSInteger) multiplier;
 @end

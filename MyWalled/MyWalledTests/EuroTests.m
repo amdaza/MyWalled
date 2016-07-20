@@ -33,11 +33,11 @@
     Euro *product = [five times:2];
     
     XCTAssertEqual(10, product.amount,
-                   @"Both amounts should be equal");
+                   @"€5 times 2 should be €10");
     
     product = [five times: 3];
     XCTAssertEqual(product.amount, 15,
-                   @"Both amounts should be equal");
+                   @"€5 times 3 should be €15");
 }
 
 
