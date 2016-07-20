@@ -40,5 +40,12 @@
                    @"€5 times 3 should be €15");
 }
 
+-(void) testEquality {
+    Euro *five = [[Euro alloc] initWithAmount:5];
+    Euro *ten = [[Euro alloc] initWithAmount:10];
+    Euro *total = [five times:2];
+    XCTAssertEqualObects(ten, total,
+                         @"Objects with same amount should be equal");
+}
 
 @end
