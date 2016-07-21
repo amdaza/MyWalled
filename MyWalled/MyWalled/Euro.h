@@ -11,8 +11,6 @@
 
 @interface Euro : Money
 
--(instancetype) initWithAmount:(NSInteger) amount;
-
 -(Euro *) times: (NSInteger) multiplier;
 
 @end

@@ -50,6 +50,8 @@
 
     XCTAssertEqualObjects(ten, total,
                          @"Objects with same amount should be equal");
+    
+    XCTAssertFalse([total isEqual:five], @"Non equivalent objects should not be equal");
 }
 
 -(void) testHash {

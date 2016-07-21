@@ -16,16 +16,6 @@
 
 @implementation Dollar
 
--(instancetype) initWithAmount:(NSInteger) amount {
-    
-    if (self = [super init]) {
-        _amount = amount;
-    }
-    return self;
-}
-
-
-
 -(Dollar *) times: (NSInteger) multiplier {
     
     Dollar *newDollar = [[Dollar alloc]
