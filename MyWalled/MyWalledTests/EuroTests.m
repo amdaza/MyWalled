@@ -52,4 +52,16 @@
                          @"Objects with same amount should be equal");
 }
 
+-(void) testHash {
+    
+    Euro *a = [[Euro alloc] initWithAmount:2];
+    Euro *b = [[Euro alloc] initWithAmount:2];
+    
+    XCTAssertEqual([a hash], [b hash],
+                   @"Equal obejects must have same hash");
+}
+
+
+
+
 @end

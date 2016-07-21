@@ -28,8 +28,16 @@
 -(Money *) times: (NSInteger) multiplier {
     
     // Shouldn't be called
+    // Subclass should implement it
     
     return [self subclassResponsibility:_cmd];
+}
+
+
+#pragma mark - Overwritten
+- (NSString *) description {
+    
+    return [NSString stringWithFormat:@"<%@ %ld", [self class], [self amount]];
 }
 
 @end
