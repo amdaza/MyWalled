@@ -34,18 +34,6 @@
     return newDollar;
 }
 
-#pragma mark - Overwritten
--(BOOL) isEqual:(id)object {
-    return [self amount] == [object amount];
-}
-
-
--(NSUInteger) hash {
-    
-    return (NSUInteger) self.amount;
-}
-
-
 
 
 @end
