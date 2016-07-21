@@ -15,6 +15,7 @@
 		C09ACC251D3D6C2400E461A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C09ACC231D3D6C2400E461A3 /* LaunchScreen.storyboard */; };
 		C09ACC3B1D3D6C2400E461A3 /* MyWalledUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C09ACC3A1D3D6C2400E461A3 /* MyWalledUITests.m */; };
 		C09ACC491D3D6D1B00E461A3 /* EuroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C09ACC481D3D6D1B00E461A3 /* EuroTests.m */; };
+		C0E7C9D01D41362E0068B97A /* NSObject+GNUStepAddons.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E7C9CF1D41362E0068B97A /* NSObject+GNUStepAddons.m */; };
 		C0F546CA1D3FFC8A00D0153B /* Euro.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F546C81D3FFC8A00D0153B /* Euro.m */; };
 		C0F546CC1D40050300D0153B /* DollarTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F546CB1D40050300D0153B /* DollarTest.m */; };
 		C0F546CF1D4005F500D0153B /* Dollar.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F546CE1D4005F500D0153B /* Dollar.m */; };
@@ -55,6 +56,8 @@
 		C09ACC3A1D3D6C2400E461A3 /* MyWalledUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyWalledUITests.m; sourceTree = "<group>"; };
 		C09ACC3C1D3D6C2400E461A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C09ACC481D3D6D1B00E461A3 /* EuroTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EuroTests.m; sourceTree = "<group>"; };
+		C0E7C9CE1D41362E0068B97A /* NSObject+GNUStepAddons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GNUStepAddons.h"; sourceTree = "<group>"; };
+		C0E7C9CF1D41362E0068B97A /* NSObject+GNUStepAddons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GNUStepAddons.m"; sourceTree = "<group>"; };
 		C0F546C81D3FFC8A00D0153B /* Euro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Euro.m; sourceTree = "<group>"; };
 		C0F546C91D3FFC8A00D0153B /* Euro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Euro.h; sourceTree = "<group>"; };
 		C0F546CB1D40050300D0153B /* DollarTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DollarTest.m; sourceTree = "<group>"; };
@@ -112,6 +115,7 @@
 		C09ACC141D3D6C2400E461A3 /* MyWalled */ = {
 			isa = PBXGroup;
 			children = (
+				C0E7C9CD1D4134F20068B97A /* Categories */,
 				C0F546C71D3FF37200D0153B /* Models */,
 				C09ACC181D3D6C2400E461A3 /* AppDelegate.h */,
 				C09ACC191D3D6C2400E461A3 /* AppDelegate.m */,
@@ -151,6 +155,15 @@
 				C09ACC3C1D3D6C2400E461A3 /* Info.plist */,
 			);
 			path = MyWalledUITests;
+			sourceTree = "<group>";
+		};
+		C0E7C9CD1D4134F20068B97A /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C0E7C9CE1D41362E0068B97A /* NSObject+GNUStepAddons.h */,
+				C0E7C9CF1D41362E0068B97A /* NSObject+GNUStepAddons.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		C0F546C71D3FF37200D0153B /* Models */ = {
@@ -300,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0F546D21D401C2D00D0153B /* Money.m in Sources */,
+				C0E7C9D01D41362E0068B97A /* NSObject+GNUStepAddons.m in Sources */,
 				C0F546CF1D4005F500D0153B /* Dollar.m in Sources */,
 				C0F546CA1D3FFC8A00D0153B /* Euro.m in Sources */,
 				C09ACC1D1D3D6C2400E461A3 /* ViewController.m in Sources */,
