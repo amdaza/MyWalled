@@ -7,6 +7,7 @@
 //
 
 #import "Money.h"
+#import "NSObject+GNUStepAddons.h"
 
 @interface Money()
 
@@ -28,10 +29,7 @@
     
     // Shouldn't be called
     
-    Money *newMoney = [[Money alloc]
-                         initWithAmount:self.amount * multiplier];
-    
-    return newMoney;
+    return [self subclassResponsibility:_cmd];
 }
 
 @end

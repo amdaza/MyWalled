@@ -16,6 +16,7 @@
 		C09ACC3B1D3D6C2400E461A3 /* MyWalledUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C09ACC3A1D3D6C2400E461A3 /* MyWalledUITests.m */; };
 		C09ACC491D3D6D1B00E461A3 /* EuroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C09ACC481D3D6D1B00E461A3 /* EuroTests.m */; };
 		C0E7C9D01D41362E0068B97A /* NSObject+GNUStepAddons.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E7C9CF1D41362E0068B97A /* NSObject+GNUStepAddons.m */; };
+		C0E7C9D21D413BAA0068B97A /* MoneyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E7C9D11D413BAA0068B97A /* MoneyTests.m */; };
 		C0F546CA1D3FFC8A00D0153B /* Euro.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F546C81D3FFC8A00D0153B /* Euro.m */; };
 		C0F546CC1D40050300D0153B /* DollarTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F546CB1D40050300D0153B /* DollarTest.m */; };
 		C0F546CF1D4005F500D0153B /* Dollar.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F546CE1D4005F500D0153B /* Dollar.m */; };
@@ -58,6 +59,7 @@
 		C09ACC481D3D6D1B00E461A3 /* EuroTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EuroTests.m; sourceTree = "<group>"; };
 		C0E7C9CE1D41362E0068B97A /* NSObject+GNUStepAddons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GNUStepAddons.h"; sourceTree = "<group>"; };
 		C0E7C9CF1D41362E0068B97A /* NSObject+GNUStepAddons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GNUStepAddons.m"; sourceTree = "<group>"; };
+		C0E7C9D11D413BAA0068B97A /* MoneyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyTests.m; sourceTree = "<group>"; };
 		C0F546C81D3FFC8A00D0153B /* Euro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Euro.m; sourceTree = "<group>"; };
 		C0F546C91D3FFC8A00D0153B /* Euro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Euro.h; sourceTree = "<group>"; };
 		C0F546CB1D40050300D0153B /* DollarTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DollarTest.m; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				C09ACC481D3D6D1B00E461A3 /* EuroTests.m */,
 				C09ACC311D3D6C2400E461A3 /* Info.plist */,
 				C0F546CB1D40050300D0153B /* DollarTest.m */,
+				C0E7C9D11D413BAA0068B97A /* MoneyTests.m */,
 			);
 			path = MyWalledTests;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C09ACC491D3D6D1B00E461A3 /* EuroTests.m in Sources */,
+				C0E7C9D21D413BAA0068B97A /* MoneyTests.m in Sources */,
 				C0F546CC1D40050300D0153B /* DollarTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
