@@ -77,7 +77,14 @@
     // But here we need an NSinteger
     //[euro performSelector:<#(SEL)#>];
     
+    // Shut warning up
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+    
     XCTAssertEqual(2, [[euro performSelector:@selector(amount)]integerValue], @"Amount should be the same as stored");
+    
+#pragma clang diagnostic pop
+    
 }
 
 
