@@ -64,6 +64,21 @@
 }
 
 
+// Testing private interface exception
+// JUST because some bug was detected
+- (void) testAmountStorage {
+
+    Euro *euro = [[Euro alloc] initWithAmount:2];
+    
+    // Cannot access directly to euro amount.
+    // Send message
+    
+    // Returns id. Would be useful working with objects
+    // But here we need an NSinteger
+    //[euro performSelector:<#(SEL)#>];
+    
+    XCTAssertEqual(2, [[euro performSelector:@selector(amount)]integerValue], @"Amount should be the same as stored");
+}
 
 
 @end
