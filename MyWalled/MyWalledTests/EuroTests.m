@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "Euro.h"
+#import "Money.h"
 
 @interface EuroTests : XCTestCase
 
@@ -29,7 +30,7 @@
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
     
-    Euro *five = [[Euro alloc] initWithAmount: 5];
+    Euro *five = [[Money alloc] euroWithAmount: 5];
     Euro *product = [five times:2];
     Euro *shouldResult = [[Euro alloc] initWithAmount: 10];
     

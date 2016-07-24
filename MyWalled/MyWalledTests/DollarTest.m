@@ -55,4 +55,28 @@
 
 
 
+// Testing private interface exception
+// JUST because some bug was detected
+- (void) testAmountStorage {
+    
+    Dollar *dollar = [[Dollar alloc] initWithAmount:2];
+    
+    // Cannot access directly to Dollar amount.
+    // Send message
+    
+    // Returns id. Would be useful working with objects
+    // But here we need an NSinteger
+    //[dollar performSelector:<#(SEL)#>];
+    
+    // Shut warning up
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+    
+    XCTAssertEqual(2, [[dollar performSelector:@selector(amount)]integerValue], @"Amount should be the same as stored");
+    
+#pragma clang diagnostic pop
+    
+}
+
+
 @end

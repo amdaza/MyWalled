@@ -9,6 +9,8 @@
 #import "Money.h"
 #import "NSObject+GNUStepAddons.h"
 #import "Money-Private.h"
+#import "Euro.h"
+#import "Dollar.h"
 
 /*
  // Now we use Money-Private.h for amount property
@@ -21,6 +23,17 @@
  */
 
 @implementation Money
+
+
++(instancetype) euroWithAmount:(NSInteger) amount {
+    return [[Euro alloc] initWithAmount:amount];
+}
+
++(instancetype) dollarWithAmount:(NSInteger) amount {
+    return [[Dollar alloc] initWithAmount:amount];
+}
+
+
 
 -(instancetype) initWithAmount:(NSInteger) amount {
     
@@ -43,7 +56,7 @@
 #pragma mark - Overwritten
 - (NSString *) description {
     
-    return [NSString stringWithFormat:@"<%@ %ld>", [self class], [self amount]];
+    return [NSString stringWithFormat:@"<%@ %ld>", [self class], [[self amount]integerValue]];
 }
 
 -(BOOL) isEqual:(id)object {
