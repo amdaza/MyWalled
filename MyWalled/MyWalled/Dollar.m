@@ -7,12 +7,16 @@
 //
 
 #import "Dollar.h"
+#import "Money-Private.h"
+
+/*
+ // Now we use Money-Private.h for amount property
 
 @interface Dollar()
 // For only writing inside class
 @property (nonatomic) NSInteger amount;
 @end
-
+*/
 
 @implementation Dollar
 

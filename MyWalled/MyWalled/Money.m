@@ -8,12 +8,17 @@
 
 #import "Money.h"
 #import "NSObject+GNUStepAddons.h"
+#import "Money-Private.h"
+
+/*
+ // Now we use Money-Private.h for amount property
 
 @interface Money()
 
 @property (nonatomic) NSInteger amount;
 
 @end
+ */
 
 @implementation Money
 
@@ -37,7 +42,7 @@
 #pragma mark - Overwritten
 - (NSString *) description {
     
-    return [NSString stringWithFormat:@"<%@ %ld", [self class], [self amount]];
+    return [NSString stringWithFormat:@"<%@ %ld>", [self class], [self amount]];
 }
 
 -(BOOL) isEqual:(id)object {

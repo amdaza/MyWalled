@@ -54,6 +54,7 @@
 		C09ACC3A1D3D6C2400E461A3 /* MyWalledUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyWalledUITests.m; sourceTree = "<group>"; };
 		C09ACC3C1D3D6C2400E461A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C09ACC481D3D6D1B00E461A3 /* EuroTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EuroTests.m; sourceTree = "<group>"; };
+		C0E7429B1D45763200A06787 /* Money-Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Money-Private.h"; sourceTree = "<group>"; };
 		C0E7C9CE1D41362E0068B97A /* NSObject+GNUStepAddons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GNUStepAddons.h"; sourceTree = "<group>"; };
 		C0E7C9CF1D41362E0068B97A /* NSObject+GNUStepAddons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GNUStepAddons.m"; sourceTree = "<group>"; };
 		C0E7C9D11D413BAA0068B97A /* MoneyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyTests.m; sourceTree = "<group>"; };
@@ -173,6 +174,7 @@
 				C0F546CE1D4005F500D0153B /* Dollar.m */,
 				C0F546D01D401C2D00D0153B /* Money.h */,
 				C0F546D11D401C2D00D0153B /* Money.m */,
+				C0E7429B1D45763200A06787 /* Money-Private.h */,
 			);
 			name = Models;
 			sourceTree = "<group>";
