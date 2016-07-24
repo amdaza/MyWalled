@@ -25,7 +25,8 @@
 -(instancetype) initWithAmount:(NSInteger) amount {
     
     if (self = [super init]) {
-        _amount = amount;
+        // Literal syntax
+        _amount = @(amount);
     }
     return self;
 }

@@ -23,7 +23,7 @@
 -(Euro *) times: (NSInteger) multiplier {
     
     Euro *newEuro = [[Euro alloc]
-                     initWithAmount:self.amount * multiplier];
+                     initWithAmount:[self.amount integerValue] * multiplier];
     
     return newEuro;
 }
