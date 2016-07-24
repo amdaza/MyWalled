@@ -25,11 +25,11 @@
 @implementation Money
 
 
-+(instancetype) euroWithAmount:(NSInteger) amount {
++(id) euroWithAmount:(NSInteger) amount {
     return [[Euro alloc] initWithAmount:amount];
 }
 
-+(instancetype) dollarWithAmount:(NSInteger) amount {
++(id) dollarWithAmount:(NSInteger) amount {
     return [[Dollar alloc] initWithAmount:amount];
 }
 
