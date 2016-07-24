@@ -20,6 +20,6 @@
 
 @interface Money ()
 
-@property (nonatomic) NSInteger amount;
+@property (nonatomic, strong) NSNumber *amount;
 
 @end
