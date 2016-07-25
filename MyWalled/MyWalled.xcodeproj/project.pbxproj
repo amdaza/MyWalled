@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C045D8931D465AA50014C202 /* BrokerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C045D8921D465AA50014C202 /* BrokerTests.m */; };
 		C09ACC171D3D6C2400E461A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C09ACC161D3D6C2400E461A3 /* main.m */; };
 		C09ACC1A1D3D6C2400E461A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C09ACC191D3D6C2400E461A3 /* AppDelegate.m */; };
 		C09ACC201D3D6C2400E461A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C09ACC1E1D3D6C2400E461A3 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C045D8921D465AA50014C202 /* BrokerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrokerTests.m; sourceTree = "<group>"; };
 		C09ACC121D3D6C2400E461A3 /* MyWalled.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWalled.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C09ACC161D3D6C2400E461A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C09ACC181D3D6C2400E461A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -81,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C045D8911D465A6D0014C202 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C0E7C9D11D413BAA0068B97A /* MoneyTests.m */,
+				C045D8921D465AA50014C202 /* BrokerTests.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		C09ACC091D3D6C2400E461A3 = {
 			isa = PBXGroup;
 			children = (
@@ -128,8 +139,8 @@
 		C09ACC2E1D3D6C2400E461A3 /* MyWalledTests */ = {
 			isa = PBXGroup;
 			children = (
+				C045D8911D465A6D0014C202 /* Models */,
 				C09ACC311D3D6C2400E461A3 /* Info.plist */,
-				C0E7C9D11D413BAA0068B97A /* MoneyTests.m */,
 			);
 			path = MyWalledTests;
 			sourceTree = "<group>";
@@ -305,6 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C045D8931D465AA50014C202 /* BrokerTests.m in Sources */,
 				C0E7C9D21D413BAA0068B97A /* MoneyTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
