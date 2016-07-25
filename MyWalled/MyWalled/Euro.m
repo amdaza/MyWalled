@@ -19,7 +19,7 @@
  */
 
 @implementation Euro
-
+/*
 -(Euro *) times: (NSInteger) multiplier {
     
     Euro *newEuro = [[Euro alloc]
@@ -28,6 +28,6 @@
     return newEuro;
 }
 
-
+*/
 
 @end

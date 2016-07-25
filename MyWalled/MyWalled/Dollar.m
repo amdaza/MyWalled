@@ -20,6 +20,7 @@
 
 @implementation Dollar
 
+/*
 -(Dollar *) times: (NSInteger) multiplier {
     
     Dollar *newDollar = [[Dollar alloc]
@@ -28,6 +29,6 @@
     return newDollar;
 }
 
-
+*/
 
 @end

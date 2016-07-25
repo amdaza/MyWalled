@@ -11,6 +11,6 @@
 
 @interface Dollar : Money
 
--(Dollar *) times: (NSInteger) multiplier;
+//-(Dollar *) times: (NSInteger) multiplier;
 
 @end

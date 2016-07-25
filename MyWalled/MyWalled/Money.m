@@ -45,11 +45,12 @@
 }
 
 -(Money *) times: (NSInteger) multiplier {
+        
+    Money *newMoney = [[Dollar alloc]
+                             initWithAmount:[self.amount integerValue] * multiplier];
+        
+    return newMoney;
     
-    // Shouldn't be called
-    // Subclass should implement it
-    
-    return [self subclassResponsibility:_cmd];
 }
 
 
