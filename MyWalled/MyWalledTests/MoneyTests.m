@@ -116,5 +116,14 @@
     
 }
 
+-(void) testSimpleAddition {
+    
+    Money * a = [[Money dollarWithAmount:5]];
+    Money * b = [[Money dollarWithAmount:5]];
+    Money * res = [[Money dollarWithAmount:10]];
+    
+    XCTAssertEqualObjects([a plus: b], res, @"$5 + $5 = $10");
+}
+
 
 @end
