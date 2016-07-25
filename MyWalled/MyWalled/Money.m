@@ -44,7 +44,7 @@
     return self;
 }
 
--(Money *) times: (NSInteger) multiplier {
+-(id) times: (NSInteger) multiplier {
         
     Money *newMoney = [[Dollar alloc]
                              initWithAmount:[self.amount integerValue] * multiplier];
@@ -57,7 +57,8 @@
 #pragma mark - Overwritten
 - (NSString *) description {
     
-    return [NSString stringWithFormat:@"<%@ %ld>", [self class], [[self amount]integerValue]];
+    return [NSString stringWithFormat:@"<%@ %ld>",
+            [self class], (long)[self amount]];
 }
 
 -(BOOL) isEqual:(id)object {

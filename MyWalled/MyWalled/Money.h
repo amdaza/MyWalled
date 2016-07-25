@@ -15,7 +15,7 @@
 
 -(instancetype) initWithAmount:(NSInteger) amount;
 
--(Money *) times: (NSInteger) multiplier;
+-(id) times: (NSInteger) multiplier;
 
 
 @end
