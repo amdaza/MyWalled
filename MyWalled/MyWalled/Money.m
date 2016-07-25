@@ -70,7 +70,8 @@
 }
 
 -(BOOL) isEqual:(id)object {
-    return [self amount] == [object amount];
+    return ([self currency] == [object currency]
+            && [self amount] == [object amount]);
 }
 
 -(NSUInteger) hash {

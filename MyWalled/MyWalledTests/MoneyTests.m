@@ -64,6 +64,13 @@
     XCTAssertFalse([totalD isEqual:fiveD], @"Non equivalent objects should not be equal");
 }
 
+-(void) testDifferentCurrencies {
+    Money *euro = [Money euroWithAmount:1];
+    Money *dollar = [Money dollarWithAmount:1];
+    
+    XCTAssertNotEqualObjects(euro, dollar, @"Different currencies shouldn't be equal!");
+}
+
 -(void) testHash {
     
     Money *a = [Money euroWithAmount:2];
