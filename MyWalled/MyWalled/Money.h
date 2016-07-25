@@ -10,10 +10,13 @@
 
 @interface Money : NSObject
 
+@property (nonatomic, readonly) NSString *currency;
+
 +(id) euroWithAmount:(NSInteger) amount;
 +(id) dollarWithAmount:(NSInteger) amount;
 
--(instancetype) initWithAmount:(NSInteger) amount;
+-(instancetype) initWithAmount: (NSInteger) amount
+                      currency: (NSString *) currency;
 
 -(id) times: (NSInteger) multiplier;
 

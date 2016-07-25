@@ -9,8 +9,8 @@
 #import "Money.h"
 #import "NSObject+GNUStepAddons.h"
 #import "Money-Private.h"
-#import "Euro.h"
-#import "Dollar.h"
+#import "Money.h"
+#import "Money.h"
 
 /*
  // Now we use Money-Private.h for amount property
@@ -26,28 +26,31 @@
 
 
 +(id) euroWithAmount:(NSInteger) amount {
-    return [[Euro alloc] initWithAmount:amount];
+    return [[Money alloc] initWithAmount:amount currency:@"EUR"];
 }
 
 +(id) dollarWithAmount:(NSInteger) amount {
-    return [[Dollar alloc] initWithAmount:amount];
+    return [[Money alloc] initWithAmount:amount currency:@"USD"];
 }
 
 
 
--(instancetype) initWithAmount:(NSInteger) amount {
+-(instancetype) initWithAmount: (NSInteger) amount
+                      currency: (NSString *) currency {
     
     if (self = [super init]) {
         // Literal syntax
         _amount = @(amount);
+        _currency = currency;
     }
     return self;
 }
 
 -(id) times: (NSInteger) multiplier {
         
-    Money *newMoney = [[Dollar alloc]
-                             initWithAmount:[self.amount integerValue] * multiplier];
+    Money *newMoney = [[Money alloc]
+                             initWithAmount:[self.amount integerValue] * multiplier
+                       currency: self.currency];
         
     return newMoney;
     
