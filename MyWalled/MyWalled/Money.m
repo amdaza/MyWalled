@@ -8,9 +8,7 @@
 
 #import "Money.h"
 #import "NSObject+GNUStepAddons.h"
-#import "Money-Private.h"
-#import "Money.h"
-#import "Money.h"
+//#import "Money-Private.h"
 
 /*
  // Now we use Money-Private.h for amount property
@@ -21,6 +19,13 @@
 
 @end
  */
+
+
+@interface Money ()
+
+@property (nonatomic, strong) NSNumber *amount;
+
+@end
 
 @implementation Money
 
