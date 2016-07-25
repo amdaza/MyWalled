@@ -24,4 +24,83 @@
                           @"Currency of dollars ($) should be USD");
 }
 
+- (void)testSimpleMultiplication {
+    // This is an example of a functional test case.
+    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    Money *five = [Money euroWithAmount: 5];
+    Money *product = [five times:2];
+    Money *shouldResult = [Money euroWithAmount: 10];
+    
+    XCTAssertEqualObjects(shouldResult, product,
+                          @"€5 times 2 should be €10");
+    
+    product = [five times: 3];
+    shouldResult = [Money euroWithAmount: 15];
+    
+    XCTAssertEqualObjects(product, shouldResult,
+                          @"€5 times 3 should be €15");
+}
+
+-(void) testEquality {
+    Money *five = [Money euroWithAmount:5];
+    Money *ten = [Money euroWithAmount:10];
+    Money *total = [five times:2];
+    
+    XCTAssertEqualObjects(ten, total,
+                          @"Objects with same amount should be equal");
+    
+    XCTAssertFalse([total isEqual:five], @"Non equivalent objects should not be equal");
+    
+    // Also test with dollars
+    
+    Money *fiveD = [Money dollarWithAmount:5];
+    Money *tenD = [Money dollarWithAmount:10];
+    Money *totalD = [fiveD times:2];
+    
+    XCTAssertEqualObjects(tenD, totalD,
+                          @"Objects with same amount should be equal");
+    
+    XCTAssertFalse([totalD isEqual:fiveD], @"Non equivalent objects should not be equal");
+}
+
+-(void) testHash {
+    
+    Money *a = [Money euroWithAmount:2];
+    Money *b = [Money euroWithAmount:2];
+    
+    XCTAssertEqual([a hash], [b hash],
+                   @"Equal obejects must have same hash");
+}
+
+
+// Testing private interface exception
+// JUST because some bug was detected
+- (void) testAmountStorage {
+    
+    Money *euro = [Money euroWithAmount:2];
+    
+    Money *dollar = [Money dollarWithAmount:2];
+    
+    // Cannot access directly to euro amount.
+    // Send message
+    
+    // Returns id. Would be useful working with objects
+    // But here we need an NSinteger
+    //[euro performSelector:<#(SEL)#>];
+    
+    // Shut warning up
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+    
+    XCTAssertEqual(2, [[euro performSelector:@selector(amount)]integerValue], @"Amount should be the same as stored");
+    
+    // Test also with dollar
+    XCTAssertEqual(2, [[dollar performSelector:@selector(amount)]integerValue], @"Amount should be the same as stored");
+    
+#pragma clang diagnostic pop
+    
+}
+
+
 @end
