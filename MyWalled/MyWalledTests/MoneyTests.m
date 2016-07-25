@@ -71,6 +71,13 @@
     
     XCTAssertEqual([a hash], [b hash],
                    @"Equal obejects must have same hash");
+    
+    // Also test with dollar
+    Money *c = [Money dollarWithAmount:2];
+    Money *d = [Money dollarWithAmount:2];
+    
+    XCTAssertEqual([c hash], [d hash],
+                   @"Equal obejects must have same hash");
 }
 
 
