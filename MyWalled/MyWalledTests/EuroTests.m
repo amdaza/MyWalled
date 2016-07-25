@@ -32,21 +32,21 @@
     
     Euro *five = [Money euroWithAmount: 5];
     Euro *product = [five times:2];
-    Euro *shouldResult = [[Euro alloc] initWithAmount: 10];
+    Euro *shouldResult = [Money euroWithAmount: 10];
     
     XCTAssertEqualObjects(shouldResult, product,
                    @"€5 times 2 should be €10");
     
     product = [five times: 3];
-    shouldResult = [[Euro alloc] initWithAmount: 15];
+    shouldResult = [Money euroWithAmount: 15];
     
     XCTAssertEqualObjects(product, shouldResult,
                    @"€5 times 3 should be €15");
 }
 
 -(void) testEquality {
-    Euro *five = [[Euro alloc] initWithAmount:5];
-    Euro *ten = [[Euro alloc] initWithAmount:10];
+    Euro *five = [Money euroWithAmount:5];
+    Euro *ten = [Money euroWithAmount:10];
     Euro *total = [five times:2];
 
     XCTAssertEqualObjects(ten, total,
@@ -57,8 +57,8 @@
 
 -(void) testHash {
     
-    Euro *a = [[Euro alloc] initWithAmount:2];
-    Euro *b = [[Euro alloc] initWithAmount:2];
+    Euro *a = [Money euroWithAmount:2];
+    Euro *b = [Money euroWithAmount:2];
     
     XCTAssertEqual([a hash], [b hash],
                    @"Equal obejects must have same hash");
@@ -69,7 +69,7 @@
 // JUST because some bug was detected
 - (void) testAmountStorage {
 
-    Euro *euro = [[Euro alloc] initWithAmount:2];
+    Euro *euro = [Money euroWithAmount:2];
     
     // Cannot access directly to euro amount.
     // Send message

@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "Dollar.h"
+#import "Money.h"
 
 @interface DollarTest : XCTestCase
 
@@ -19,23 +20,23 @@
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
     
-    Dollar *five = [[Dollar alloc] initWithAmount: 5];
+    Dollar *five = [Money dollarWithAmount: 5];
     Dollar *product = [five times:2];
-    Dollar *shouldResult = [[Dollar alloc] initWithAmount: 10];
+    Dollar *shouldResult = [Money dollarWithAmount: 10];
     
     XCTAssertEqualObjects(shouldResult, product,
                           @"$5 times 2 should be $10");
     
     product = [five times: 3];
-    shouldResult = [[Dollar alloc] initWithAmount: 15];
+    shouldResult = [Money dollarWithAmount: 15];
     
     XCTAssertEqualObjects(product, shouldResult,
                           @"$5 times 3 should be $15");
 }
 
 -(void) testEquality {
-    Dollar *five = [[Dollar alloc] initWithAmount:5];
-    Dollar *ten = [[Dollar alloc] initWithAmount:10];
+    Dollar *five = [Money dollarWithAmount:5];
+    Dollar *ten = [Money dollarWithAmount:10];
     Dollar *total = [five times:2];
     
     XCTAssertEqualObjects(ten, total,
@@ -46,8 +47,8 @@
 
 -(void) testHash {
     
-    Dollar *a = [[Dollar alloc] initWithAmount:2];
-    Dollar *b = [[Dollar alloc] initWithAmount:2];
+    Dollar *a = [Money dollarWithAmount:2];
+    Dollar *b = [Money dollarWithAmount:2];
     
     XCTAssertEqual([a hash], [b hash],
                    @"Equal obejects must have same hash");
@@ -59,7 +60,7 @@
 // JUST because some bug was detected
 - (void) testAmountStorage {
     
-    Dollar *dollar = [[Dollar alloc] initWithAmount:2];
+    Dollar *dollar = [Money dollarWithAmount:2];
     
     // Cannot access directly to Dollar amount.
     // Send message
