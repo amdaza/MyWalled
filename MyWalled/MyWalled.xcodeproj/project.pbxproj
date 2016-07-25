@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C045D8931D465AA50014C202 /* BrokerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C045D8921D465AA50014C202 /* BrokerTests.m */; };
+		C045D8961D465C110014C202 /* Broker.m in Sources */ = {isa = PBXBuildFile; fileRef = C045D8951D465C110014C202 /* Broker.m */; };
 		C09ACC171D3D6C2400E461A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C09ACC161D3D6C2400E461A3 /* main.m */; };
 		C09ACC1A1D3D6C2400E461A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C09ACC191D3D6C2400E461A3 /* AppDelegate.m */; };
 		C09ACC201D3D6C2400E461A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C09ACC1E1D3D6C2400E461A3 /* Main.storyboard */; };
@@ -38,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		C045D8921D465AA50014C202 /* BrokerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrokerTests.m; sourceTree = "<group>"; };
+		C045D8941D465C110014C202 /* Broker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Broker.h; sourceTree = "<group>"; };
+		C045D8951D465C110014C202 /* Broker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Broker.m; sourceTree = "<group>"; };
 		C09ACC121D3D6C2400E461A3 /* MyWalled.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWalled.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C09ACC161D3D6C2400E461A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C09ACC181D3D6C2400E461A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -168,6 +171,8 @@
 			children = (
 				C0F546D01D401C2D00D0153B /* Money.h */,
 				C0F546D11D401C2D00D0153B /* Money.m */,
+				C045D8941D465C110014C202 /* Broker.h */,
+				C045D8951D465C110014C202 /* Broker.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 				C0E7C9D01D41362E0068B97A /* NSObject+GNUStepAddons.m in Sources */,
 				C09ACC1A1D3D6C2400E461A3 /* AppDelegate.m in Sources */,
 				C09ACC171D3D6C2400E461A3 /* main.m in Sources */,
+				C045D8961D465C110014C202 /* Broker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

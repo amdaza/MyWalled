@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "Money.h"
+#import "Broker.h"
 
 @interface BrokerTests : XCTestCase
 
@@ -28,11 +29,14 @@
     [super tearDown];
 }
 
--(void) testSimpleReduction {
+
+- (void) testSimpleReduction {
+    
     Broker *broker = [[Broker alloc] init];
+    
     Money *sum = [[Money dollarWithAmount:5] plus:[Money dollarWithAmount:5]];
     
-    Money *reduced = [broker reduce: sum toCurrency: @"USD"];
+    Money *reduced = [broker reduce: sum toCurrency: @"USD"];
     
     XCTAssertEqualObjects(sum, reduced, @"Conversion to same currency should be a NOP");
 }
