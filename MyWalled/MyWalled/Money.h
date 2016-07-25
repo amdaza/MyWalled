@@ -20,5 +20,5 @@
 
 -(id) times: (NSInteger) multiplier;
 
-
+-(Money *) plus: (Money *) other;
 @end
