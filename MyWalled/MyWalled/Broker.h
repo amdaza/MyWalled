@@ -13,7 +13,7 @@
 
 @property (nonatomic, strong) NSMutableDictionary *rates;
 
-- (id<Money>) reduce: (Money *) money toCurrency: (NSString *) currency;
+- (Money *) reduce: (id<Money>) money toCurrency: (NSString *) currency;
 
 - (void) addRate: (NSInteger) rate
     fromCurrency: (NSString *) fromCurrency

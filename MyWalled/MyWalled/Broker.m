@@ -22,7 +22,7 @@
     return self;
 }
 
-- (Money *) reduce: (id<Money>) money
+- (id<Money>) reduce: (id<Money>) money
         toCurrency: (NSString *) currency{
     
     // Now implemented with double dispatch,

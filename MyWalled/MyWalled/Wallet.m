@@ -28,9 +28,9 @@
     return self;
 }
 
--(id<Money>) plus:(Money *)money {
+-(id<Money>) plus:(Money *)other {
     
-    [self.moneys addObject: money];
+    [self.moneys addObject: other];
     return self;
 }
 
@@ -44,6 +44,20 @@
     }
     self.moneys = newMoneys;
     return self;
+}
+
+-(Money *) reduceToCurrency: (NSString *) currency
+                    withBoker: (Broker *) broker {
+    
+    Money *result = [[Money alloc] initWithAmount:0
+                                         currency:currency];
+    
+    for (Money *each in self.moneys){
+        result = [result plus: [each reduceToCurrency:currency
+                                            withBoker:broker]];
+       
+    }
+    return result;
 }
 
 @end

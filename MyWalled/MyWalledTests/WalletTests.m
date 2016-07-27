@@ -34,7 +34,7 @@
 -(void) testAdditionWithReduction {
     
     Broker *broker = [Broker new];
-    [broker addRate: 2 fromCurrency:@"USD" toCurrency:@"EUR"];
+    [broker addRate: 2 fromCurrency:@"EUR" toCurrency:@"USD"];
     Wallet *wallet = [[Wallet alloc] initWithAmount: 40 currency: @"EUR"];
     
     [wallet plus: [Money dollarWithAmount: 20]];
