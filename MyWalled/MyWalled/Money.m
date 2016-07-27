@@ -51,7 +51,7 @@
     return self;
 }
 
--(id) times: (NSInteger) multiplier {
+-(id<Money>) times: (NSInteger) multiplier {
         
     Money *newMoney = [[Money alloc]
                              initWithAmount:[self.amount integerValue] * multiplier
@@ -61,7 +61,7 @@
     
 }
 
--(Money *) plus: (Money *) other {
+-(id<Money>) plus: (Money *) other {
     
     NSInteger totalAmount = [self.amount integerValue] + [other.amount integerValue];
     

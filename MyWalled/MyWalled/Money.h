@@ -7,8 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+@class Money;
 
-@interface Money : NSObject
+@protocol Money <NSObject>
+
+-(instancetype) initWithAmount: (NSInteger) amount
+                      currency: (NSString *) currency;
+
+-(id<Money>) times: (NSInteger) multiplier;
+
+-(id<Money>) plus: (Money *) other;
+
+@end
+
+@interface Money : NSObject<Money>
 
 @property (nonatomic, readonly) NSString *currency;
 @property (nonatomic, strong, readonly) NSNumber *amount;
@@ -16,10 +28,5 @@
 +(id) euroWithAmount:(NSInteger) amount;
 +(id) dollarWithAmount:(NSInteger) amount;
 
--(instancetype) initWithAmount: (NSInteger) amount
-                      currency: (NSString *) currency;
 
--(id) times: (NSInteger) multiplier;
-
--(Money *) plus: (Money *) other;
 @end
