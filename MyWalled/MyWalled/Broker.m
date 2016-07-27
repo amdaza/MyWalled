@@ -11,8 +11,6 @@
 
 @interface Broker ()
 
-@property (nonatomic, strong) NSMutableDictionary *rates;
-
 @end
 
 @implementation Broker
@@ -24,20 +22,19 @@
     return self;
 }
 
-- (id<Money>) reduce: (Money *) money
+- (Money *) reduce: (id<Money>) money
         toCurrency: (NSString *) currency{
     
+    // Now implemented with double dispatch,
+    // to distinguish what kind of id<Money> is passed
+    /*
     Money *result;
-    
-    // Check currencies are the same
     if ([money.currency isEqual:currency]) {
         return result  = money;
     }
-    
-    
     double rate = [[self.rates
                        objectForKey:[self keyFromCurrency:money.currency
-                                               toCurrency:currency]] doubleValue];
+                                            toCurrency:currency]] doubleValue];
     if (rate == 0) {
         // No conversion rate, throw exception
         [NSException raise:@"NoConversionRateException"
@@ -50,11 +47,10 @@
         result = [[Money alloc] initWithAmount:newAmount
                                       currency:currency];
     }
-    
-    
-    
-    
     return result;
+     */
+    
+    return [money reduceToCurrency:currency withBoker:self];
 }
 
 

@@ -8,6 +8,7 @@
 
 #import "Money.h"
 #import "NSObject+GNUStepAddons.h"
+#import "Broker.h"
 //#import "Money-Private.h"
 
 /*
@@ -69,6 +70,40 @@
                                         currency:self.currency];
     
     return total;
+}
+
+
+-(id<Money>) reduceToCurrency: (NSString *) currency
+                    withBoker: (Broker *) broker {
+    
+    Money *result;
+    
+    // Check currencies are the same
+    if ([self.currency isEqual:currency]) {
+        return result = self;
+    }
+    
+    
+    double rate = [[broker.rates
+                    objectForKey:[broker keyFromCurrency:self.currency
+                                            toCurrency:currency]] doubleValue];
+    if (rate == 0) {
+        // No conversion rate, throw exception
+        [NSException raise:@"NoConversionRateException"
+                    format:@"Must have a conversion from %@ to %@",
+         self.currency, currency];
+    } else {
+        // Conversion exists
+        NSInteger newAmount = [self.amount integerValue] * rate;
+        
+        result = [[Money alloc] initWithAmount:newAmount
+                                      currency:currency];
+    }
+    
+    
+    
+    
+    return result;
 }
 
 

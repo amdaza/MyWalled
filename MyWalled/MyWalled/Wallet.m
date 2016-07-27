@@ -28,6 +28,22 @@
     return self;
 }
 
+-(id<Money>) plus:(Money *)money {
+    
+    [self.moneys addObject: money];
+    return self;
+}
 
+-(id<Money>) times:(NSInteger)multiplier {
+    
+    NSMutableArray *newMoneys = [NSMutableArray arrayWithCapacity:self.moneys.count];
+    
+    for (Money *each in self.moneys) {
+        Money *newMoney = [each times:multiplier];
+        [newMoneys addObject:newMoney];
+    }
+    self.moneys = newMoneys;
+    return self;
+}
 
 @end
