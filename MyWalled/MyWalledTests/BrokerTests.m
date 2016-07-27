@@ -51,7 +51,7 @@
 
 -(void) testReduction {
     
-    [self.emptyBroker addRate: 2 fromCurrency: @"USD" toCurrency: @"EUR"];
+    [self.emptyBroker addRate: 2 fromCurrency: @"EUR" toCurrency: @"USD"];
     
     Money *dollars = [Money dollarWithAmount:10];
     Money *euros = [Money euroWithAmount:5];
@@ -65,6 +65,13 @@
     XCTAssertThrows([self.emptyBroker reduce:self.oneDollar
                                   toCurrency:@"EUR"],
                     @"No rates info should throw exception");
+}
+
+-(void) testNilConversionDoesNotChangeMoney {
+    
+    XCTAssertEqualObjects(self.oneDollar, [self.emptyBroker reduce:self.oneDollar
+                                                        toCurrency:@"USD"],
+                          @"Nil conversion shouldn't produce any changes");
 }
 
 
