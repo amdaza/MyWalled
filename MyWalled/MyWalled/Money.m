@@ -86,7 +86,7 @@
 
 -(NSUInteger) hash {
     
-    return (NSUInteger) self.amount;
+    return [self.amount integerValue];
 }
 
 @end
