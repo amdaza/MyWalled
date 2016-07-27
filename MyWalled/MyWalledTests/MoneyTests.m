@@ -125,5 +125,11 @@
     XCTAssertEqualObjects([a plus: b], res, @"$5 + $5 = $10");
 }
 
+-(void) testThatHashIsAmount {
+    
+    Money * one = [Money dollarWithAmount:1];
+    
+    XCTAssertEqual([one hash], 1, @"Hash is the amount");
+}
 
 @end
