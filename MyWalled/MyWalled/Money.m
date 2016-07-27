@@ -75,8 +75,8 @@
 #pragma mark - Overwritten
 - (NSString *) description {
     
-    return [NSString stringWithFormat:@"<%@ %ld>",
-            [self class], (long)[self amount]];
+    return [NSString stringWithFormat:@"<%@: %@ %@>",
+            [self class], self.currency, self.amount];
 }
 
 -(BOOL) isEqual:(id)object {

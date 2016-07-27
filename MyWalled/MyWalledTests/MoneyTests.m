@@ -135,7 +135,7 @@
 -(void) testDescription {
     Money * one = [Money dollarWithAmount:1];
     
-    NSString *desc = @"<Money: $1>";
+    NSString *desc = @"<Money: USD 1>";
 
     XCTAssertEqualObjects([one description], desc, @"Description as desired");
 }
