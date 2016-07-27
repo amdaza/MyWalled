@@ -27,7 +27,15 @@
 - (Money *) reduce: (Money *) money
         toCurrency: (NSString *) currency{
     
-    return money;
+    NSInteger rate = [[self.rates objectForKey:[self keyFromCurrency:money.currency
+                                                         toCurrency:currency]] integerValue];
+    
+    NSInteger newAmount = [money.amount integerValue] * rate;
+    
+    Money *newMoney = [[Money alloc] initWithAmount:newAmount
+                                           currency:currency];
+    
+    return newMoney;
 }
 
 
