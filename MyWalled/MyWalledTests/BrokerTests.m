@@ -49,7 +49,7 @@
     [broker addRate: 2 fromCurrency: @"USD" toCurrency: @"EUR"];
     
     Money *dollars = [Money dollarWithAmount:10];
-    Money *euros = [Money euroWithAmount:5];
+    Money *euros = [Money euroWithAmount:5]; 
 
     Money *converted = [broker reduce:dollars toCurrency:@"EUR"];
     
