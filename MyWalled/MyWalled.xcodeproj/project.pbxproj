@@ -27,6 +27,7 @@
 		C0EE28E71D4A79F100966FEB /* ControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C0EE28E61D4A79F100966FEB /* ControllerTests.m */; };
 		C0EE28EA1D4A9A3700966FEB /* WalletTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0EE28E91D4A9A3700966FEB /* WalletTableViewController.m */; };
 		C0EE28EB1D4A9A3700966FEB /* WalletTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0EE28E91D4A9A3700966FEB /* WalletTableViewController.m */; };
+		C0EE28EE1D4AA3BE00966FEB /* NSNotificationCenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C0EE28ED1D4AA3BE00966FEB /* NSNotificationCenterTests.m */; };
 		C0F546D21D401C2D00D0153B /* Money.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F546D11D401C2D00D0153B /* Money.m */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		C0EE28E61D4A79F100966FEB /* ControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControllerTests.m; sourceTree = "<group>"; };
 		C0EE28E81D4A9A3700966FEB /* WalletTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalletTableViewController.h; sourceTree = "<group>"; };
 		C0EE28E91D4A9A3700966FEB /* WalletTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalletTableViewController.m; sourceTree = "<group>"; };
+		C0EE28ED1D4AA3BE00966FEB /* NSNotificationCenterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNotificationCenterTests.m; sourceTree = "<group>"; };
 		C0F546D01D401C2D00D0153B /* Money.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Money.h; sourceTree = "<group>"; };
 		C0F546D11D401C2D00D0153B /* Money.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Money.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -163,6 +165,7 @@
 		C09ACC2E1D3D6C2400E461A3 /* MyWalledTests */ = {
 			isa = PBXGroup;
 			children = (
+				C0EE28EC1D4AA38D00966FEB /* Singletons */,
 				C0EE28E51D4A79CB00966FEB /* Controllers */,
 				C045D8911D465A6D0014C202 /* Models */,
 				C09ACC311D3D6C2400E461A3 /* Info.plist */,
@@ -206,6 +209,14 @@
 				C0EE28E61D4A79F100966FEB /* ControllerTests.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C0EE28EC1D4AA38D00966FEB /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				C0EE28ED1D4AA3BE00966FEB /* NSNotificationCenterTests.m */,
+			);
+			name = Singletons;
 			sourceTree = "<group>";
 		};
 		C0F546C71D3FF37200D0153B /* Models */ = {
@@ -373,6 +384,7 @@
 			files = (
 				C0EE28E21D4A79B300966FEB /* SimpleViewController.m in Sources */,
 				C0B8B50C1D494F9B00BFC94B /* Wallet.m in Sources */,
+				C0EE28EE1D4AA3BE00966FEB /* NSNotificationCenterTests.m in Sources */,
 				C045D8931D465AA50014C202 /* BrokerTests.m in Sources */,
 				C0E7C9D21D413BAA0068B97A /* MoneyTests.m in Sources */,
 				C0B8B5081D494BDD00BFC94B /* WalletTests.m in Sources */,
