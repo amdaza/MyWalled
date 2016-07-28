@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class Wallet;
 
 @interface WalletTableViewController : UITableViewController
+
+-(id) initWithModel: (Wallet *) model;
 
 @end

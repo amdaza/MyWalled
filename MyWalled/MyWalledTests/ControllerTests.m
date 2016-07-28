@@ -40,7 +40,7 @@
     self.wallet = [[Wallet alloc] initWithAmount:1
                                         currency:@"USD"];
     [self.wallet plus: [Money euroWithAmount:1]];
-    self.walletTVC = [[WalletTableViewController alloc] initWithModel: wallet];
+    self.walletTVC = [[WalletTableViewController alloc] initWithModel: self.wallet];
 }
 
 - (void)tearDown {
@@ -68,7 +68,8 @@
 }
 
 -(void) testNumberOfCells {
-    
+    XCTAssertEqual(self.wallet.count +1, [self.walletTVC tableView:nil numberOfRowsInSection:0],
+                   @"Number of cells should be number of moneys plus one");
 }
 
 @end

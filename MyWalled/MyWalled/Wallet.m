@@ -16,6 +16,10 @@
 
 @implementation Wallet
 
+-(NSUInteger) count {
+    return [self.moneys count];
+}
+
 -(id) initWithAmount:(NSInteger)amount
             currency:(NSString *)currency {
     
