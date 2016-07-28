@@ -7,6 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "FakeNotificationCenter.h"
+#import "Wallet.h"
 
 @interface NSNotificationCenterTests : XCTestCase
 
@@ -27,10 +29,10 @@
 
 -(void) subscribesToMemoryWarning {
     
-    FakeNotificationCenter *fake = [FakeNotificationCenter defaultCenter];
-    BigAndFatObject *fat = [BigAndFatObject new];
+    FakeNotificationCenter *fake = [FakeNotificationCenter new];
+    Wallet *fat = [Wallet new];
     
-    [fat subscribeToMemoryWarning: fake];
+    [fat subscribeToMemoryWarning: (NSNotificationCenter *)fake];
     
     NSDictionary *obs = [fake observers];
     id observer = [obs objectForKey:UIApplicationDidReceiveMemoryWarningNotification];
