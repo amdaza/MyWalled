@@ -74,4 +74,16 @@
     return [NSString stringWithFormat:@"%@-%@", fromCurrency, toCurrency];
 }
 
+#pragma mark - Rates
+-(void) parseJsonData: (NSData *) json {
+    NSError *err = nil;
+    id obj = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingAllowFragments error:&err];
+    if (obj != nil) {
+        // Get rates and add them to broker
+    } else {
+        // Data not received, FFFFFFFFUUUUUUUU
+        [NSException raise:@"NoRatesInJSONException" format:@"JSON must have data"];
+    }
+}
+
 @end

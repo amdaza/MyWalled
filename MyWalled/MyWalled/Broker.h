@@ -22,4 +22,5 @@
 - (NSString *) keyFromCurrency: (NSString *) fromCurrency
                     toCurrency: (NSString *) toCurrency;
 
+-(void) parseJsonData: (NSData *) json;
 @end
