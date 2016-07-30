@@ -82,7 +82,8 @@
         // Get rates and add them to broker
     } else {
         // Data not received, FFFFFFFFUUUUUUUU
-        [NSException raise:@"NoRatesInJSONException" format:@"JSON must have data"];
+        [NSException raise:@"NoRatesInJSONException"
+                    format:@"JSON must have data"];
     }
 }
 
