@@ -41,7 +41,7 @@
 
 
 
--(instancetype) initWithAmount: (NSInteger) amount
+-(id) initWithAmount: (NSInteger) amount
                       currency: (NSString *) currency {
     
     if (self = [super init]) {

@@ -32,7 +32,8 @@
 
 -(void)emptyRatesRaisesException {
     Broker *b = [Broker new];
-    XCTAssertThrows([b parseJSONRates:jsonData],
+    NSData * json = nil;
+    XCTAssertThrows([b parseJsonData:json],
                     @"Empty json should raise exception");
     
     

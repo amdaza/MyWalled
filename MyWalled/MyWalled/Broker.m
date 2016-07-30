@@ -21,6 +21,11 @@
     }
     return self;
 }
+/*
+-(NSUInteger) currenciesCount {
+    return self.rates.count / 2;
+}
+ */
 
 - (id<Money>) reduce: (id<Money>) money
         toCurrency: (NSString *) currency{

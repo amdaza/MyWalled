@@ -10,7 +10,9 @@
 
 @interface Wallet()
 
-@property (nonatomic, strong) NSMutableArray *moneys;
+@property (nonatomic, strong) NSMutableDictionary *moneys;
+@property (nonatomic, strong) NSMutableArray *currencies;
+
 
 @end
 
@@ -20,33 +22,72 @@
     return [self.moneys count];
 }
 
+-(NSUInteger) currenciesCount {
+    return [self.currencies count];
+}
+
 -(id) initWithAmount:(NSInteger)amount
             currency:(NSString *)currency {
     
     if (self = [super init]) {
         Money *money = [[Money alloc] initWithAmount:amount
                                             currency:currency];
-        _moneys = [NSMutableArray array];
-        [_moneys addObject: money];
+        //_moneys = [NSMutableArray array];
+        //[_moneys addObject: money];
+        
+        NSMutableArray *currencyMoneys = [NSMutableArray array];
+        [currencyMoneys addObject: money];
+        
+        _moneys = [@{}mutableCopy];
+        [_moneys setObject:currencyMoneys
+                    forKey:currency];
+        
+        _currencies = [NSMutableArray array];
+        [_currencies addObject: currency];
     }
     return self;
 }
 
 -(id<Money>) plus:(Money *)other {
     
-    [self.moneys addObject: other];
+    NSMutableArray *currencyMoneys = [self.moneys valueForKey: other.currency];
+    
+    if (currencyMoneys == nil) {
+        currencyMoneys = [NSMutableArray array];
+        [currencyMoneys addObject: other];
+        
+        [self.moneys setObject: currencyMoneys
+                        forKey: other.currency];
+
+    } else {
+        [currencyMoneys addObject: other];
+    }
+    
+    
+    
+    if (![self.currencies containsObject:other.currency]) {
+        [self.currencies addObject: other.currency];
+    }
+    
     return self;
 }
 
 -(id<Money>) times:(NSInteger)multiplier {
     
-    NSMutableArray *newMoneys = [NSMutableArray arrayWithCapacity:self.moneys.count];
+    for (NSString *currencyName in self.currencies) {
+        
+        NSMutableArray *currencyMoneys = [self.moneys valueForKey: currencyName];
     
-    for (Money *each in self.moneys) {
-        Money *newMoney = [each times:multiplier];
-        [newMoneys addObject:newMoney];
+        NSMutableArray *newMoneys = [NSMutableArray arrayWithCapacity:currencyMoneys.count];
+    
+        for (Money *each in currencyMoneys) {
+            Money *newMoney = [each times:multiplier];
+            [newMoneys addObject:newMoney];
+        }
+        //currencyMoneys = newMoneys;
+        [self.moneys setObject:newMoneys forKey: currencyName];
     }
-    self.moneys = newMoneys;
+    
     return self;
 }
 
@@ -55,11 +96,14 @@
     
     Money *result = [[Money alloc] initWithAmount:0
                                          currency:currency];
-    
-    for (Money *each in self.moneys){
-        result = [result plus: [each reduceToCurrency:currency
-                                            withBoker:broker]];
-       
+    for (NSString *currencyName in self.currencies) {
+        
+        NSMutableArray *currencyMoneys = [self.moneys valueForKey: currencyName];
+        
+        for (Money *each in currencyMoneys){
+            result = [result plus: [each reduceToCurrency:currency
+                                                withBoker:broker]];
+        }
     }
     return result;
 }

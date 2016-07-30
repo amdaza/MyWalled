@@ -63,7 +63,7 @@
 -(void) testTableHasOneSection {
     
     NSUInteger sections = [self.walletTVC numberOfSectionsInTableView:nil];
-    XCTAssertEqual(sections, wallet.currenciesCount +1,
+    XCTAssertEqual(sections, self.wallet.currenciesCount +1,
                    @"Only one section");
 }
 
