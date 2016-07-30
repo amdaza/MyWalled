@@ -13,8 +13,10 @@
 @interface Wallet : NSObject<Money>
 
 @property (nonatomic, readonly) NSUInteger count;
+@property (nonatomic, strong) NSMutableArray *currencies;
 @property (nonatomic, readonly) NSUInteger currenciesCount;
 
+-(NSUInteger) moneyCountForCurrency: (NSString *) currency;
 -(void) subscribeToMemoryWarning: (NSNotificationCenter *) nc;
 
 @end

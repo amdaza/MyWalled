@@ -11,7 +11,6 @@
 @interface Wallet()
 
 @property (nonatomic, strong) NSMutableDictionary *moneys;
-@property (nonatomic, strong) NSMutableArray *currencies;
 
 
 @end
@@ -24,6 +23,13 @@
 
 -(NSUInteger) currenciesCount {
     return [self.currencies count];
+}
+
+-(NSUInteger) moneyCountForCurrency: (NSString *) currency {
+    
+    NSMutableArray *currencyMoneys = [self.moneys valueForKey: currency];
+    
+    return [currencyMoneys count];
 }
 
 -(id) initWithAmount:(NSInteger)amount

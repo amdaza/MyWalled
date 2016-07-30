@@ -47,8 +47,11 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
 
-    return self.model.count + 1;
+    NSString *currency = self.model.currencies[0];
+    NSInteger numOfMoneys = [self.model moneyCountForCurrency:currency];
+    return numOfMoneys + 1;
 }
 
 /*

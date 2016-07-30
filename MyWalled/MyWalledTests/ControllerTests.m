@@ -68,7 +68,9 @@
 }
 
 -(void) testNumberOfCells {
-    XCTAssertEqual(self.wallet.count +1, [self.walletTVC tableView:nil numberOfRowsInSection:0],
+    NSString *currency = self.wallet.currencies[0];
+    NSInteger numOfMoneys = [self.wallet moneyCountForCurrency:currency];
+    XCTAssertEqual(numOfMoneys +1, [self.walletTVC tableView:nil numberOfRowsInSection:0],
                    @"Number of cells should be number of moneys plus one");
 }
 
