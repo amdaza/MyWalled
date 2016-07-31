@@ -56,6 +56,28 @@
 }
 
 
+-(void) testTakeMoneyWhenExists {
+    Wallet *wallet = [[Wallet alloc] initWithAmount: 40 currency: @"USD"];
+    [wallet plus: [Money dollarWithAmount: 30]];
+    [wallet plus: [Money dollarWithAmount: 15]];
+    
+    [wallet takeMoneyOfAmount:15 andCurrency:@"USD"];
+    
+    Money *subtotal = [wallet totalMoneysOfCurrency:@"USD"];
+    
+    XCTAssertEqualObjects(subtotal, [Money dollarWithAmount:70], @"Existing money should be deleted");
+    
+}
 
+
+-(void) testTakeMoneyWhenNotExists {
+    Wallet *wallet = [[Wallet alloc] initWithAmount: 40 currency: @"USD"];
+    
+    ;
+    
+    XCTAssertThrows([wallet takeMoneyOfAmount:15 andCurrency:@"USD"],
+                    @"Non existing money should throw an exception");
+    
+}
 
 @end
