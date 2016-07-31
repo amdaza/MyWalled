@@ -59,7 +59,6 @@
         return numOfMoneys + 1;
     }
 
-    
 }
 
 
@@ -115,17 +114,17 @@
 }
 
 
-
-
-
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+- (NSString *)tableView:(UITableView *)tableView
+titleForHeaderInSection:(NSInteger)section {
+ 
+    if (section < self.model.currenciesCount) {
+        return self.model.currencies[section];
+        
+    } else {
+        return @"Total amount";
+    }
+    
 }
-*/
 
 
 
