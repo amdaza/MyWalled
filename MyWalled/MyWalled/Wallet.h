@@ -18,5 +18,8 @@
 
 -(NSUInteger) moneyCountForCurrency: (NSString *) currency;
 -(void) subscribeToMemoryWarning: (NSNotificationCenter *) nc;
+-(Money *) getMoneyForCurrency: (NSString *) currency
+                       atIndex: (NSInteger) index;
+-(Money *) totalMoneysOfCurrency: (NSString *) currency;
 
 @end

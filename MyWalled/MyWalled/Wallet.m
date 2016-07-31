@@ -25,6 +25,7 @@
     return [self.currencies count];
 }
 
+
 -(NSUInteger) moneyCountForCurrency: (NSString *) currency {
     
     NSMutableArray *currencyMoneys = [self.moneys valueForKey: currency];
@@ -113,6 +114,29 @@
     }
     return result;
 }
+
+-(Money *) totalMoneysOfCurrency: (NSString *) currency{
+    Money *result = [[Money alloc] initWithAmount:0
+                                         currency:currency];
+    
+    NSMutableArray *currencyMoneys = [self.moneys valueForKey: currency];
+    
+    for (Money *m in currencyMoneys){
+        result = [result plus: m];
+    }
+    
+    return result;
+}
+
+-(Money *) getMoneyForCurrency: (NSString *) currency
+                       atIndex: (NSInteger) index {
+    
+    NSMutableArray *currencyMoneys = [self.moneys valueForKey: currency];
+    
+    return currencyMoneys[index];
+    
+}
+
 
 #pragma mark - Test Notifications
 -(void) subscribeToMemoryWarning: (NSNotificationCenter *) nc {

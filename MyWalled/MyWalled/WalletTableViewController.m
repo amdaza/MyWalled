@@ -8,6 +8,7 @@
 
 #import "WalletTableViewController.h"
 #import "Wallet.h"
+#import "Broker.h"
 
 @interface WalletTableViewController ()
 
@@ -61,15 +62,50 @@
     
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
+    Money *money = nil;
+   
+    if(indexPath.section == self.model.currenciesCount){
+        // Total section
+        
+        Broker *broker = [Broker new];
+        [broker addRate: 2 fromCurrency:@"EUR" toCurrency:@"USD"];
+        money = [broker reduce: self.model toCurrency: @"USD"];
+        
+    } else {
+        NSString *currency = self.model.currencies[indexPath.section];
+        
+        if (indexPath.row < [self.model moneyCountForCurrency:currency]) {
+            // Get money
+            money = [self.model getMoneyForCurrency: currency
+                                            atIndex: indexPath.row];
+        } else {
+            // Get money
+            money = [self.model totalMoneysOfCurrency: currency];
+        }
+        
+    }
+    
+    NSString *cellID = @"moneyCell";
+    
+    // Create cell
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: cellID];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault
+                                      reuseIdentifier: cellID];
+    }
+    
+    
+    // Sincronizar libreta -> celda
+    cell.textLabel.text = money.description;
+
     
     return cell;
 }
-*/
+
 
 
 

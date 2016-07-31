@@ -44,6 +44,16 @@
                           @"€40 + $20 = $100 2:1");
 }
 
+-(void) testSubtotalOfCurrency{
+    
+    Wallet *wallet = [[Wallet alloc] initWithAmount: 40 currency: @"USD"];
+    [wallet plus: [Money dollarWithAmount: 30]];
+    [wallet plus: [Money dollarWithAmount: 15]];
+    
+    Money *subtotal = [wallet totalMoneysOfCurrency:@"USD"];
+    
+    XCTAssertEqualObjects(subtotal, [Money dollarWithAmount:85], @"Subtotal($40 + $30 + 15) == $85");
+}
 
 
 

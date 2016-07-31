@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "Wallet.h"
+#import "WalletTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    Wallet *model = [[Wallet alloc] initWithAmount:10
+                                          currency:@"USD"];
+    [model plus: [Money euroWithAmount:7]];
+    [model plus: [Money euroWithAmount:12]];
+    [model plus: [Money euroWithAmount:16]];
+    [model plus: [Money dollarWithAmount:7]];
+    [model plus: [Money dollarWithAmount:25]];
+    [model plus: [Money dollarWithAmount:14]];
+    
+    WalletTableViewController *tVC = [[WalletTableViewController alloc]
+                                     initWithModel: model];
+    
+    self.window.rootViewController = tVC;
+    
+    
+    [self.window makeKeyAndVisible];
+
+    
     return YES;
 }
 
