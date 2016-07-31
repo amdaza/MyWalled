@@ -61,7 +61,7 @@
     [wallet plus: [Money dollarWithAmount: 30]];
     [wallet plus: [Money dollarWithAmount: 15]];
     
-    [wallet takeMoneyOfAmount:15 andCurrency:@"USD"];
+    [wallet takeMoney:[Money dollarWithAmount:15]];
     
     Money *subtotal = [wallet totalMoneysOfCurrency:@"USD"];
     
@@ -75,7 +75,7 @@
     
     ;
     
-    XCTAssertThrows([wallet takeMoneyOfAmount:15 andCurrency:@"USD"],
+    XCTAssertThrows([wallet takeMoney:[Money dollarWithAmount:15]],
                     @"Non existing money should throw an exception");
     
 }
