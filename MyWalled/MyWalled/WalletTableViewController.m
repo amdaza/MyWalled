@@ -108,7 +108,7 @@
     
     
     // Sincronizar libreta -> celda
-    cell.textLabel.text = money.description;
+    cell.textLabel.text = cellLabelText;
 
     
     return cell;
