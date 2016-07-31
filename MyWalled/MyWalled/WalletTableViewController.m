@@ -66,6 +66,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     Money *money = nil;
+    NSString *cellLabelText = nil;
    
     if(indexPath.section == self.model.currenciesCount){
         // Total section
@@ -74,6 +75,9 @@
         [broker addRate: 2 fromCurrency:@"EUR" toCurrency:@"USD"];
         money = [broker reduce: self.model toCurrency: @"USD"];
         
+        cellLabelText = [NSString stringWithFormat: @"Total in %@: %@",
+                         @"USD", money.description];
+        
     } else {
         NSString *currency = self.model.currencies[indexPath.section];
         
@@ -81,9 +85,13 @@
             // Get money
             money = [self.model getMoneyForCurrency: currency
                                             atIndex: indexPath.row];
+            
+            cellLabelText = money.description;
         } else {
             // Get money
             money = [self.model totalMoneysOfCurrency: currency];
+            cellLabelText = [NSString stringWithFormat: @"Subotal %@: %@",
+                             currency, money.description];
         }
         
     }
