@@ -21,5 +21,6 @@
 -(Money *) getMoneyForCurrency: (NSString *) currency
                        atIndex: (NSInteger) index;
 -(Money *) totalMoneysOfCurrency: (NSString *) currency;
+-(Wallet *) takeMoney: (Money *) money;
 
 @end

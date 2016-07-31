@@ -138,6 +138,31 @@
 }
 
 
+
+-(Wallet *) takeMoney: (Money *) money{
+    
+    NSMutableArray *currencyMoneys = [self.moneys valueForKey: money.currency];
+    
+    BOOL found = NO;
+    
+    for (Money *m in currencyMoneys) {
+        if ([m isEqual: money]) {
+            [currencyMoneys removeObject:m];
+            found = YES;
+            break;
+        }
+    }
+    
+    if (!found) {
+        // Throw exception
+        [NSException raise:@"DeleteNonExistingMoney"
+                    format:@"Money must exists to take it"];
+
+    }
+    
+    return self;
+}
+
 #pragma mark - Test Notifications
 -(void) subscribeToMemoryWarning: (NSNotificationCenter *) nc {
     [nc addObserver:self
