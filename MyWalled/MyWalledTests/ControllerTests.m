@@ -67,10 +67,23 @@
                    @"Only one section");
 }
 
--(void) testNumberOfCells {
-    NSString *currency = self.wallet.currencies[0];
-    NSInteger numOfMoneys = [self.wallet moneyCountForCurrency:currency];
-    XCTAssertEqual(numOfMoneys +1, [self.walletTVC tableView:nil numberOfRowsInSection:0],
+-(void) testNumberOfCellsInCurrencySection {
+
+    if (self.wallet.currenciesCount > 0) {
+    
+        NSString *currency = self.wallet.currencies[0];
+        NSInteger numOfMoneys = [self.wallet moneyCountForCurrency:currency];
+        XCTAssertEqual(numOfMoneys +1, [self.walletTVC tableView:nil numberOfRowsInSection:0],
+                   @"Number of cells should be number of moneys plus one");
+    } else {
+        // No currencies to check
+        XCTAssertTrue(true);
+    }
+}
+
+-(void) testNumberOfCellsInTotalSection {
+    NSInteger lastSection = self.wallet.currenciesCount;
+    XCTAssertEqual(1, [self.walletTVC tableView:nil numberOfRowsInSection:lastSection],
                    @"Number of cells should be number of moneys plus one");
 }
 
